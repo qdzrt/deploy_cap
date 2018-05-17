@@ -9,7 +9,7 @@
 set :stage, :production
 set :rails_env, :production
 
-server '192.168.0.31', user: fetch(:deploy_user), port: 4200, roles: %w{app db web}, ssh_options: { forward_agent: true }
+server '192.168.0.31', user: fetch(:deploy_user), roles: %w{app db web}, ssh_options: { forward_agent: true }
 
 set :unicorn_worker_count, 5
 set :enable_ssl, false
