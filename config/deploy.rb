@@ -11,7 +11,7 @@ set :deploy_to, "/var/www/#{fetch(:application)}"
 set :pty, true
 set :use_sudo, true
 
-append :linked_files, "config/database.yml"
+append :linked_files, "config/database.yml", "config/secrets.yml"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "bin", "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
